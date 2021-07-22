@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body style="background-color: pink;">
+        <center style = "margin-top: 40;">
+        <h1>My Family Book</h1>
+        <br>                                                       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwkH3bbTjLXoURcf8WxgN6gzYeldXfFD_Mg&usqp=CAU" id="family_member_image">
+        <h4 id="family_member_name"></h4>
+        <button onclick="update()">Next</button>
+    </center>
+    </body>
+    <script>
+    var images = 
+    ["https://www.pngfind.com/pngs/m/159-1594870_download-father-and-daughter-png-clipart-father-clip.png", 
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8HoDBB_0HMsXrifAQUgt8zIX4TRy2C_-6A&usqp=CAU", 
+    "https://listimg.pinclipart.com/picdir/s/15-154429_free-download-cartoon-clipart-cartoon-clip-art-big.png", 
+    "https://i.pinimg.com/originals/72/28/b1/7228b19e5db53d8eeaa69f624e24687a.png"];
+    
+    var names =
+    [ " Santosh Kumar Singh ", " Bhabya Singh"," Tanvi Singh", " Trisha Singh" ]
+
+   var i = 0;
+function update(){
+ i++;
+ var number_of_members_in_array = 4
+ if( i > 3)
+ {
+     i = 0;
+ }
+ var updatedImage = images[i];
+ var  updatedName = names[i];
+ 
+ document.getElementById("family_member_image").src = updatedImage;
+ document.getElementById("family_member_name").innerHTML = updatedName;
+}
+</script>
+   
+</html>
